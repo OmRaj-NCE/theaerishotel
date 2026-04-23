@@ -1,0 +1,83 @@
+.gallery {
+  padding: 120px 10%;
+  background: linear-gradient(135deg, #f8f6f2, #efeae4);
+}
+
+.gallery h1 {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 50px;
+}
+
+/* 🎥 Video strip */
+.videoStrip {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  margin-bottom: 50px;
+}
+
+.videoStrip video {
+  min-width: 320px;
+  height: 200px;
+  border-radius: 20px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.videoStrip video:hover {
+  transform: scale(1.05);
+}
+
+/* 🖼️ Images */
+.image {
+  width: 100%;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.image:hover {
+  transform: scale(1.03);
+}
+
+/* 🔥 Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.lightbox img,
+.lightbox video {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 20px;
+}
+
+/* Scrollbar */
+.videoStrip::-webkit-scrollbar {
+  height: 6px;
+}
+.videoStrip::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .content h1 {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,110 @@
+.wrapper {
+  padding: 120px 0;
+  background: linear-gradient(135deg, #f8f6f2, #efeae4);
+  text-align: center;
+}
+
+.wrapper h2 {
+  font-size: 34px;
+  margin-bottom: 50px;
+}
+
+/* Slider container */
+.slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Track */
+.track {
+  display: flex;
+  gap: 20px;
+  animation: scroll 18s linear infinite;
+}
+.slider:hover .track {
+  animation-duration: 18s;
+}
+
+/* Pause on hover */
+.pause .track {
+  animation-play-state: paused;
+}
+
+/* Card */
+.card {
+  min-width: 280px;
+  max-width: 280px;
+  padding: 25px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255,255,255,0.3);
+
+  transition: 0.3s;
+  position: relative;
+}
+
+/* Hover depth */
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Accent glow */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: radial-gradient(circle at top, rgba(200,169,126,0.2), transparent);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Text */
+.card p {
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+.card h4 {
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {
+    min-width: 220px;
+  }
+}
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .content h1 {
+    font-size: 32px;
+  }
+}

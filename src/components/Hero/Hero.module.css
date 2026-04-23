@@ -1,0 +1,98 @@
+.hero {
+  position: relative;
+  height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.3),
+    rgba(0,0,0,0.6)
+  );
+  z-index: 1;
+}
+
+/* Content */
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+
+  transition: transform 0.1s linear, opacity 0.1s linear;
+}
+
+.content h1 {
+  font-size: 52px;
+  font-weight: 600;
+}
+
+.content p {
+  margin-top: 10px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* Buttons */
+.actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.primaryBtn {
+  padding: 14px 28px;
+  border-radius: 30px;
+  background: var(--primary);
+  color: white;
+  transition: 0.3s;
+}
+
+.primaryBtn:hover {
+  transform: scale(1.05);
+}
+
+.secondaryBtn {
+  padding: 14px 28px;
+  border-radius: 30px;
+
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+
+  color: white;
+  transition: 0.3s;
+}
+
+.secondaryBtn:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+.shrink {
+  height: 70vh;
+  transition: height 0.4s ease;
+}
+
+.shrink .content {
+  transform: scale(0.9);
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 32px;
+  }
+}

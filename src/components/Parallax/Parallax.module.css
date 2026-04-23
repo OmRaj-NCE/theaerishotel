@@ -1,0 +1,27 @@
+.parallax {
+  height: 400px;
+  background-image: url("https://images.unsplash.com/photo-1519741497674-611481863552");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 40px;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .content h1 {
+    font-size: 32px;
+  }
+}

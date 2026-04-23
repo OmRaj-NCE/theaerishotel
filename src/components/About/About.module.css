@@ -1,0 +1,42 @@
+.about {
+  display: flex;
+  padding: 100px 10%;
+  gap: 50px;
+  align-items: center;
+}
+
+.left {
+  flex: 1;
+}
+
+.left h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.left p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.right {
+  flex: 1;
+  height: 400px;
+  background-image: url("https://images.unsplash.com/photo-1551882547-ff40c63fe5fa");
+  background-size: cover;
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .content h1 {
+    font-size: 32px;
+  }
+}

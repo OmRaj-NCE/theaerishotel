@@ -1,0 +1,342 @@
+.wrapper {
+  padding: 120px 10%;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  flex: 1;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: 0.4s ease;
+  position: relative;
+}
+
+/* ✨ Hover effect */
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* 👻 Hide others */
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.9);
+}
+
+/* 🔥 Active card */
+.active {
+  transform: scale(1.05);
+  background: white;
+}
+
+/* Expanded Section */
+.expanded {
+  margin-top: 60px;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.media {
+  height: 180px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #ddd, #bbb);
+  transition: 0.4s;
+}
+
+.media:hover {
+  transform: scale(1.05);
+}
+
+/* Detail text */
+.detail {
+  max-width: 600px;
+  line-height: 1.6;
+  opacity: 0.7;
+}
+
+.primaryBtn {
+  padding: 12px 24px;
+  border-radius: 30px;
+  background: var(--primary);
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.primaryBtn:hover {
+  transform: scale(1.05);
+}
+
+.secondaryBtn {
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+/* ✨ PREMIUM HOVER */
+.secondaryBtn:hover {
+  transform: translateY(-2px);
+  background: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.booking {
+  margin-top: 100px;
+  padding: 60px;
+  border-radius: 32px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #ffffff, #f3efe8);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.1);
+
+  transition: transform 0.4s ease;
+}
+
+/* 🧠 Subtle parallax hover */
+.booking:hover {
+  transform: translateY(-6px);
+}
+
+/* ✨ Animated gradient glow */
+.booking::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(200,169,126,0.25), transparent);
+  top: -200px;
+  right: -150px;
+  animation: glowMove 8s ease-in-out infinite;
+}
+
+/* 🌊 Moving light effect */
+.booking::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255,255,255,0.4), transparent);
+  bottom: -100px;
+  left: -100px;
+  animation: lightMove 10s linear infinite;
+}
+
+/* Animations */
+@keyframes glowMove {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(40px, 40px); }
+  100% { transform: translate(0,0); }
+}
+
+@keyframes lightMove {
+  0% { transform: translate(0,0); }
+  100% { transform: translate(60px, -60px); }
+}
+
+/* Content */
+.bookingContent {
+  flex: 1;
+  z-index: 2;
+}
+
+.bookingContent h2 {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.bookingContent p {
+  opacity: 0.7;
+  max-width: 480px;
+}
+
+/* Buttons */
+.actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+/* Primary button (cinematic) */
+.primaryBtn {
+  padding: 14px 28px;
+  border-radius: 40px;
+  background: var(--primary);
+  color: white;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✨ Shine effect */
+.primaryBtn::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+  top: 0;
+  left: -100%;
+  transition: 0.5s;
+}
+
+.primaryBtn:hover::before {
+  left: 100%;
+}
+
+.primaryBtn:hover {
+  transform: scale(1.07);
+}
+
+/* Glass secondary button */
+.secondaryBtn {
+  padding: 14px 28px;
+  border-radius: 40px;
+  border: none;
+
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(12px);
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.secondaryBtn:hover {
+  background: white;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Features */
+.features {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* 🎥 Visual block */
+.visual {
+  flex: 1;
+  height: 240px;
+  border-radius: 24px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(200,169,126,0.25),
+    rgba(200,169,126,0.05)
+  );
+
+  backdrop-filter: blur(12px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating particles */
+.visual::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: rgba(200,169,126,0.6);
+  border-radius: 50%;
+  top: 20%;
+  left: 30%;
+  animation: float 6s infinite ease-in-out;
+}
+
+.visual::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgba(200,169,126,0.4);
+  border-radius: 50%;
+  bottom: 20%;
+  right: 25%;
+  animation: float 8s infinite ease-in-out;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .booking {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .content h1 {
+    font-size: 32px;
+  }
+}

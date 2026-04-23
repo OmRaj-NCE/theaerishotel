@@ -1,0 +1,41 @@
+.slider {
+  overflow: hidden;
+  padding: 50px 0;
+}
+
+.track {
+  display: flex;
+  width: calc(250px * 6);
+  animation: scroll 20s linear infinite;
+}
+
+.track img {
+  width: 250px;
+  height: 160px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 15px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .content h1 {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,106 @@
+.faq {
+  padding: 120px 10%;
+  background: linear-gradient(135deg, #f8f6f2, #efeae4);
+}
+
+.faq h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Card */
+.card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 20px 25px;
+  cursor: pointer;
+  transition: 0.4s ease;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Hover */
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Question Row */
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+}
+
+/* Icon */
+.icon {
+  font-size: 22px;
+  transition: transform 0.3s;
+}
+
+/* Rotate icon when active */
+.active .icon {
+  transform: rotate(180deg);
+}
+
+/* Answer */
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  opacity: 0;
+}
+
+/* When open */
+.active .answer {
+  max-height: 200px;
+  margin-top: 10px;
+  opacity: 0.7;
+}
+
+/* Glow effect */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: radial-gradient(circle at top left, rgba(200,169,126,0.15), transparent);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faq h2 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .content h1 {
+    font-size: 32px;
+  }
+}
