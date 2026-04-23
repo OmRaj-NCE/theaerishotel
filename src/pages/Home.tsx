@@ -5,7 +5,7 @@ import ServicesPreview from "../components/ServicesPreview/ServicesPreview";
 import ImageTrail from "../components/ImageTrail/ImageTrail";
 import Testimonials from "../components/Testimonials/Testimonials";
 import FAQ from "../components/FAQ/FAQ";
-import Footer from "../components/Footer/Footer";
+// import Footer from "../components/Footer/Footer";
 import SEO from "../components/SEO/SEO";
 
 <SEO
@@ -24,7 +24,7 @@ const Home = () => {
       <ImageTrail />
       <Testimonials />
       <FAQ />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

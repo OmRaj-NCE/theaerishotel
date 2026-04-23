@@ -2,6 +2,7 @@ import styles from "./Gallery.module.css";
 import { useState } from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import SEO from "../components/SEO/SEO";
+
 // 🔥 IMPORT IMAGES
 import img1 from "../assets/gallery/images/img1.jpg";
 import img2 from "../assets/gallery/images/img2.jpg";
