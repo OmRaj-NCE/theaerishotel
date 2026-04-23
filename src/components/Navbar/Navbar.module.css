@@ -4,25 +4,38 @@
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 15px 30px;
+  padding: 14px 28px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 16px;
 
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(16px);
   border-radius: 50px;
-
-  border: 1px solid rgba(255,255,255,0.2);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 
   z-index: 1000;
 }
 
-/* Links hover glow */
+.logo {
+  font-weight: 600;
+  font-size: 18px;
+  white-space: nowrap;   /* ← prevents "The Aeris / Hotel" wrap */
+  flex-shrink: 0;        /* ← never shrink the logo */
+}
+
+.links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
 .links a {
   position: relative;
   padding: 5px 10px;
+  white-space: nowrap;
   transition: 0.3s;
 }
 
@@ -41,47 +54,60 @@
   width: 100%;
 }
 
-.logo {
-  font-weight: 600;
-  font-size: 18px;
-}
-
-.links {
-  display: flex;
-  gap: 25px;
-}
-
-.cta {
-  background: var(--primary);
-  padding: 10px 20px;
-  border-radius: 30px;
-  color: white;
-  font-size: 14px;
-}
-
 .bookBtn {
   background: linear-gradient(135deg, #c8a97e, #a88b65);
   padding: 10px 20px;
   border-radius: 25px;
   color: white;
+  font-size: 14px;
+  white-space: nowrap;
+  flex-shrink: 0;        /* ← never shrink the button */
   transition: all 0.3s ease;
 }
 
 .bookBtn:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(200,169,126,0.3);
+  box-shadow: 0 10px 20px rgba(200, 169, 126, 0.3);
 }
 
+/* ── Tablet (~600–768px): shrink gaps ── */
 @media (max-width: 768px) {
-  .cards {
-    flex-direction: column;
+  .nav {
+    padding: 12px 20px;
+    gap: 10px;
   }
 
-  .about {
-    flex-direction: column;
+  .links {
+    gap: 14px;
   }
 
-  .content h1 {
-    font-size: 32px;
+  .links a {
+    font-size: 14px;
+    padding: 4px 6px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .bookBtn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}
+
+/* ── Mobile (<480px): hide nav links, keep logo + button ── */
+@media (max-width: 480px) {
+  .links {
+    display: none;       /* ← hides Home/Services/Gallery on small screens */
+  }
+
+  .nav {
+    padding: 12px 18px;
+    border-radius: 40px;
+  }
+
+  .bookBtn {
+    padding: 9px 16px;
   }
 }
