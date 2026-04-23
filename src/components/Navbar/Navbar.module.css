@@ -59,6 +59,19 @@
   font-size: 14px;
 }
 
+.bookBtn {
+  background: linear-gradient(135deg, #c8a97e, #a88b65);
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.bookBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(200,169,126,0.3);
+}
+
 @media (max-width: 768px) {
   .cards {
     flex-direction: column;

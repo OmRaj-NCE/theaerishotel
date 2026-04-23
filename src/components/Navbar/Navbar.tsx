@@ -13,12 +13,13 @@ const Navbar = () => {
       </div>
 
       <a
-        href="https://wa.me/9196611111107"
-        target="_blank"
-        className={styles.cta}
-      >
-        Book Now
-      </a>
+  href="https://wa.me/919661111107?text=Hello%20I%20want%20to%20book%20a%20room%20at%20The%20Aeris%20Hotel"
+  target="_blank"
+  rel="noopener noreferrer"
+  className={styles.bookBtn}
+>
+  Book Now
+</a>
     </nav>
   );
 };
