@@ -64,19 +64,25 @@ Message: ${form.message}`
             required
           />
 
-          <input
-            type="date"
-            name="checkin"
-            onChange={handleChange}
-            required
-          />
+          <div className={styles.field}>
+  <label>Check-in</label>
+  <input
+    type="date"
+    name="checkin"
+    onChange={handleChange}
+    required
+  />
+</div>
 
-          <input
-            type="date"
-            name="checkout"
-            onChange={handleChange}
-            required
-          />
+<div className={styles.field}>
+  <label>Check-out</label>
+  <input
+    type="date"
+    name="checkout"
+    onChange={handleChange}
+    required
+  />
+</div>
 
           <input
             name="guests"
