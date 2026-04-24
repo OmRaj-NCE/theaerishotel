@@ -10,9 +10,9 @@ const services = [
   { id: "ring", title: "Ring Ceremony", desc: "Elegant intimate events" },
 ];
 <SEO
-  title="Wedding & Banquet Hall in Patna | The Aeris Hotel"
-  description="Book luxury banquet hall in Patna for weddings, birthdays, ring ceremony and events."
-  url="https://yourdomain.com/services"
+  title="Services | The Aeris Hotel"
+  description="Explore wedding, birthday, corporate and banquet services at The Aeris Hotel."
+  url="https://theaerishotel.vercel.app/services"
 />
 const Services = () => {
   const [active, setActive] = useState<string | null>(null);

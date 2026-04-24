@@ -7,11 +7,12 @@ import Testimonials from "../components/Testimonials/Testimonials";
 import FAQ from "../components/FAQ/FAQ";
 // import Footer from "../components/Footer/Footer";
 import SEO from "../components/SEO/SEO";
+import EnquiryForm from "../components/EnquiryForm/EnquiryForm";
 
 <SEO
   title="The Aeris Hotel | Luxury Stay in Patna"
-  description="Premium hotel in Patna offering luxury rooms, restaurant, and banquet for weddings, birthdays and events."
-  url="https://yourdomain.com/"
+  description="Luxury hotel in Patna offering premium rooms, weddings, events and banquet services."
+  url="https://theaerishotel.vercel.app/"
 />
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
       <ImageTrail />
       <Testimonials />
       <FAQ />
+      <EnquiryForm />
       {/* <Footer /> */}
     </>
   );

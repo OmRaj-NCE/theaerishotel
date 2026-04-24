@@ -32,9 +32,9 @@ import vid6 from "../assets/gallery/videos/vid6.mp4";
 // ... continue till vid10
 // import vid10 from "../assets/gallery/videos/vid10.mp4";
 <SEO
-  title="Hotel Gallery | The Aeris Hotel Patna"
-  description="Explore luxury hotel rooms, banquet events and restaurant ambiance in Patna."
-  url="https://yourdomain.com/gallery"
+  title="Gallery | The Aeris Hotel"
+  description="View our luxury hotel gallery, weddings, rooms and event experiences."
+  url="https://theaerishotel.vercel.app/gallery"
 />
 const images = [
   img1, img2, img3, img4, img5, img6, img7, img8, img9, img10,
